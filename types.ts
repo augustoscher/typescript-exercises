@@ -57,3 +57,19 @@ let obj: object
 obj = {
   title: "adaasjdoi"
 }
+
+// Type inference
+let str = "defined message"
+// str = 1 number is not assignable to type string
+
+let arr = [] //array de any
+arr.push({ title: 'oi' })
+arr.push(1)
+
+window.addEventListener('click', (e: MouseEvent) => {
+  console.log(e);
+})
+
+window.addEventListener('click', e => {
+  console.log(e);
+})
