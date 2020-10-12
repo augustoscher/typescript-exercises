@@ -39,6 +39,17 @@ class CharAccount extends UserAccount {
 
 }
 
+abstract class Test {
+  name = 'Test'
+
+  set setName(name: string){
+    this.name = name
+  }
+}
+
+// const t = new Test(); cannot create instance from abstract class
+
+
 const as = new UserAccount('Augusto', 29);
 console.log(as);
 as.logDetails()
