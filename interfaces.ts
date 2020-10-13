@@ -2,9 +2,9 @@
 interface Game {
   title: string;
   description: string;
-  genre: string;
-  platform: string[];
-  getSimilars: (title: string) => void
+  readonly genre: string;
+  platform?: string[]; //optional
+  getSimilars?: (title: string) => void
 }
 
 const theLastOfUs: Game = {
@@ -17,4 +17,20 @@ const theLastOfUs: Game = {
   }
 }
 
-theLastOfUs.getSimilars("The Last Of Us")
+if(theLastOfUs.getSimilars) theLastOfUs.getSimilars("The Last Of Us");
+// theLastOfUs.genre = '' cannot assign because is readonly
+console.log('genre: ', theLastOfUs.genre);
+
+interface DLC extends Game {
+  originalGame: Game;
+  newContent: string[];
+}
+
+const leftBehind: DLC = {
+  title: "The Last og US - Left Behind",
+  description: "blah",
+  genre: 'Action',
+  platform: ["PS$"],
+  originalGame: theLastOfUs,
+  newContent: ['3hours story', 'new characters']
+}
