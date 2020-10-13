@@ -1,5 +1,6 @@
 // conjunto de dados para descreve a estrutura de um objeto
 interface Game {
+  id?: string | number;
   title: string;
   description: string;
   readonly genre: string;
@@ -33,4 +34,16 @@ const leftBehind: DLC = {
   platform: ["PS$"],
   originalGame: theLastOfUs,
   newContent: ['3hours story', 'new characters']
+}
+
+class CreateGame implements Game {
+  title: string;
+  description: string;
+  genre: string;
+
+  constructor(t: string, d: string, g: string){
+    this.title = t;
+    this.description = d;
+    this.genre = g;
+  }
 }
