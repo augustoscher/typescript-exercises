@@ -23,3 +23,4 @@ logInfo('123', 'xunda');
 
 // renderPlatform('ios'); Argument of type 'ios' is not assignable to Platform
 renderPlatform('Linux');
+renderPlatform('MacOs');
