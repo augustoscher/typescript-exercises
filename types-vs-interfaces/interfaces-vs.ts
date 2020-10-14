@@ -21,3 +21,10 @@ interface getSimilars {
 }
 
 //=========================== diferenças ===========================//
+
+// interface ID extends number {} não é possível criar interface e extender de number
+
+interface Tuple {
+  0: number;
+  1: number;
+}

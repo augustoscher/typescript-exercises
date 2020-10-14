@@ -20,3 +20,14 @@ type getSimilar2 = (title: string) => void;
 
 //=========================== diferenças ===========================//
 
+// permite declarar tipos primitivos
+type ID2 = string | number
+
+// possível declarar tuplas normalmente
+type Tuple2 = [number, number, string];
+
+[1, 2, "xunda"] as Tuple2;
+
+// Apenas uma declaração por escopo
+type JQuery2 = { a: string };
+// type JQuery2 = { b: string }; não permitido, tipo já declarado
