@@ -32,3 +32,9 @@ type Tuple2 = [number, number, string];
 type JQuery2 = { a: string };
 // type JQuery2 = { b: string }; não permitido, tipo já declarado
 
+// recomendado usar na maioria das vezes.
+// iniciar com type e quando for necessário extender, muda para interface
+// Usar em React - Props
+
+// CONSISTÊNCIA!
+// Manter consistência com o projeto que estamos trabalhando
