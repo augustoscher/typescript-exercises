@@ -28,3 +28,19 @@ interface Tuple {
   0: number;
   1: number;
 }
+
+// Pode ter multiplas declarações da mesma interface.
+// Typescript faz o merge
+interface JQuery {
+  a: string;
+}
+
+interface JQuery {
+  b: string;
+}
+
+const te: JQuery = {
+  a: 'foo',
+  b: 'bar',
+  // c: 'oasijd' não existe na interface
+}
