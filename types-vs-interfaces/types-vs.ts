@@ -31,3 +31,4 @@ type Tuple2 = [number, number, string];
 // Apenas uma declaração por escopo
 type JQuery2 = { a: string };
 // type JQuery2 = { b: string }; não permitido, tipo já declarado
+

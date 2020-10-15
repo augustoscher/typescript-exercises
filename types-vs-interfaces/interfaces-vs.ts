@@ -44,3 +44,6 @@ const te: JQuery = {
   b: 'bar',
   // c: 'oasijd' não existe na interface
 }
+
+// vantagem: em libs, optar por interface, por ser mais extensível.
+// usar quando estiver trabalhando objetos/classes
