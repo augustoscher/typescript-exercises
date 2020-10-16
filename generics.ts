@@ -10,7 +10,7 @@
 // V => Value
 // E => Element
 
-function useState<S>() {
+function useState<S extends number | string>() {
   let state: S;
 
   function getState() {
