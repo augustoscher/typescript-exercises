@@ -26,3 +26,18 @@ const updateTodo = (todo: Todo, fieldsToUpdate: Partial<Todo>) => {
 const todo2: Todo = updateTodo(todo, { completed: true })
 
 // pick
+// creates type TodoPreview containing title and completed properties
+type TodoPreview = Pick<Todo, "title" | "completed">
+const todo3: TodoPreview = {
+  title: "My todo",
+  completed: false,
+}
+
+// omit
+// inverso de pick. Omits especified properties
+type TodoPreview2 = Omit<Todo, "description">
+const todo4: TodoPreview2 = {
+  title: 'My Todo4',
+  completed: false,
+  // description: 'Hi', error because is omited
+}
