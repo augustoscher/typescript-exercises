@@ -4,21 +4,27 @@
 // Quando definimos os tipos em linguagem fortemente tipada, acabamos não sendo tão genéricos
 // Generics: Conseguir ter uma certa flexibilidade de tipo dentro de uma linguagem tipada
 
-function useState() {
-  let state: number;
+// S => State
+// T => Type
+// K => Key
+// V => Value
+// E => Element
+
+function useState<S>() {
+  let state: S;
 
   function getState() {
     return state;
   }
 
-  function setState(newState: number) {
+  function setState(newState: S) {
     state = newState
   }
 
   return { getState, setState }
 }
 
-const newState = useState();
-newState.setState(123);
-console.log('newState: ', newState);
+const newState = useState<string>();
+newState.setState("123");
 console.log('newState: ', newState.getState());
+// newState.setState(123); number not allowed to assign to string
