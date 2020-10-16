@@ -10,7 +10,9 @@
 // V => Value
 // E => Element
 
-function useState<S extends number | string>() {
+// S extends number | string defininf generic
+// = string set default type to generic
+function useState<S extends number | string = string>() {
   let state: S;
 
   function getState() {
