@@ -1,6 +1,6 @@
 # typescript-mini-course
 
-Typescript Mini Course
+Typescript Exercises
 
 ## Commands
 

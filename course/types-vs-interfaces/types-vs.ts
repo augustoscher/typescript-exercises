@@ -13,7 +13,10 @@ type DLC2 = {
 type GameCollection2 = Game2 & DLC2;
 
 // implements
-class CreateGame2 implements GameCollection2 {}
+class CreateGame2 implements GameCollection2 {
+  title: string;
+  extra: string;
+}
 
 // declarar função
 type getSimilar2 = (title: string) => void;

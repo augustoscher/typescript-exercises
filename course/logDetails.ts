@@ -2,7 +2,12 @@
 type Uuid = number | string | undefined
 type Platform = 'Windows' | 'Linux' | 'MacOs'
 
-const logDetails = (uuid: Uuid, item: string) => {
+type Log = {
+  uuid: Uuid
+  item: string
+}
+
+const logDetails = ({ uuid, item }: Log) => {
   console.log(`uuid: ${uuid} - item: ${item}`);
 }
 
@@ -15,8 +20,8 @@ const renderPlatform = (platform: Platform) => {
 }
 
 
-logDetails(123, 'xunda');
-logDetails('123', 'xunda');
+logDetails({ uuid: 123, item: 'xunda'});
+logDetails({ uuid: '123', item: 'xunda'});
 
 logInfo(123, 'xunda');
 logInfo('123', 'xunda');
