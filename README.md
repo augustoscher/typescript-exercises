@@ -1,6 +1,6 @@
-# typescript-mini-course
+# typescript-excercises
 
-Typescript Exercises
+Repository to learn things related to Typescript
 
 ## Commands
 
@@ -16,8 +16,3 @@ Compiling all files in watch mode:
 tsc --watch
 ```
 
-Running in nodemon:
-
-```bash
-nodemon classes.js
-```
